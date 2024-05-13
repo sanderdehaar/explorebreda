@@ -1,0 +1,16 @@
+/* Hero section account */
+#hero-account form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+#hero-account form .buttons span {
+    text-decoration: underline;
+    margin-left: 6px;
+}
+
+#hero-account form .buttons span:hover {
+    cursor: pointer;
+}

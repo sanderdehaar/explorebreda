@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/global/global.css">
+    <link rel="stylesheet" type="text/css" href="css/global/header.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <!-- extra links -->
+    <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Website title -->
+    <title>Explorebreda - Account</title>
+</head>
+    <!-- Pagewrapper information -->
+
+    <body id="pagewrapper">
+        <!-- Page Header -->
+        <header>
+            <div class="container">
+                <!-- website logo -->
+                <a class="logo" href="index.html">GENZ</a>
+                <ul>
+                    <li><a href="#">Our brand</a></li>
+                    <li><a href="collections.html">Collection 2024<i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="account_status">
+                        <a href="#">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <div class="head"></div>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-camera-retro"></i>My stories</a></li>
+                                <li><a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+                                <li><a href="#"><i class="fa-solid fa-user"></i>Account details</a></li>
+                                <li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="login_status">
+                        <a href="#">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <div class="head"></div>
+                            <ul>
+                                <li><p>Not logged in.</p></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <div class="menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section id="hero-account">
+                <div class="container">
+                    <form>
+                        <div class="head">
+                            <h2>Register</h2>
+                        </div>
+                
+                        <input type="text" id="full_name" name="full_name" placeholder="Full name">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <input type="password" id="confirm-password" name="password" placeholder="Confirm Password">
+                
+                        <div class="buttons">
+                            <button type="button" onclick="register()">Register</button>
+                            <p>Already have an account?<a href="login.html">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <div id="alert"></div>
+    </body>
+    <!-- The core Firebase (required) -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <!-- firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- firebase database connection -->
+    <script src="js/database.js"></script>
+    <script src="js/account.js"></script>
+</html>

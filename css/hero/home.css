@@ -1,0 +1,17 @@
+/* Hero section home */
+#hero-home {
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#hero-home .container {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}

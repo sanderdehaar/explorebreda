@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/global/global.css">
+    <link rel="stylesheet" type="text/css" href="css/global/header.css">
+    <link rel="stylesheet" type="text/css" href="css/hero/banner.css">
+    <link rel="stylesheet" type="text/css" href="css/hero/home.css">
+    <!-- extra links -->
+    <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Website title -->
+    <title>Explorebreda - Home</title>
+</head>
+    <!-- Pagewrapper information -->
+
+    <body id="pagewrapper">
+        <!-- Page Header -->
+        <header id="global-header">
+            <div class="container">
+                <!-- website logo -->
+                <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Explorebreda logo" /><img src="assets/img/logo.png" alt="Explorebreda logo" /></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Stories<i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#">Discover Breda</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="account_status">
+                        <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <div class="head"></div>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-camera-retro"></i>My stories</a></li>
+                                <li><a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+                                <li><a href="#"><i class="fa-solid fa-user"></i>Account details</a></li>
+                                <li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="login_status">
+                        <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <div class="head"></div>
+                            <ul>
+                                <li><p>Not logged in.</p></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <div class="menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <!-- menu -->
+        <div id="menu">
+            <div class="box">
+                <div class="information">
+                    <div class="head">
+                        <h2>Menu</h2>
+                        <div class="menu close-menu">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main information -->
+        <main>
+            <!-- Hero banner with homepage information -->
+            <section id="hero-banner">
+                <img src="assets/img/background.jpg" alt="Center of Breda with shops and people walking through it" />
+                <div class="container">
+                    <div class="box">
+                        <h1>Discover Breda's hidden gems</h1>
+                        <h1>and share your adventures</h1>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </section>
+            <div class="overlay-banner">
+                <div class="box">
+                    <a href="test.html"><button><i class="fa-solid fa-arrow-right"></i></button></a>
+                </div>
+            </div>
+            <section id="hero-home">
+                <div class="container">
+                    <!-- <h2>Homepage</h2>
+                    <p id="account_name"></p>
+                    <p id="account_email"></p> -->
+                </div>
+            </section>
+        </main>
+        <div id="alert"></div>
+    </body>
+    <!-- The core Firebase (required) -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <!-- firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- firebase database connection -->
+    <script src="js/database.js"></script>
+    <!-- JS files -->
+    <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
+</html>
