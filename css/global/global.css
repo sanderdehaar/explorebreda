@@ -132,7 +132,6 @@ p {
     font-size: var(--small-s);
 }
 
-
 @media only screen and (max-width: 767px) {
     h2 {
         font-size: var(--medium-m);
@@ -151,5 +150,8 @@ p {
     }
     p {
         font-size: var(--small-xs);
+    }
+    button {
+        font-size: var(--small-xs) !important;
     }
 }
