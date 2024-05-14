@@ -1,0 +1,9 @@
+footer {
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    left: 0;
+    width: 100vw;
+    height: 400px;
+    background-color: var(--main);
+}

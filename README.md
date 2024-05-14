@@ -1,3 +1,1 @@
-# Explore Breda 
-
-## Project Group 2
+# Explore Breda
