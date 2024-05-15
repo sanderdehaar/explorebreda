@@ -101,6 +101,48 @@ a {
     color: var(--red) !important;
 }
 
+/* Question ai */
+#question-ai {
+    position: fixed;
+    z-index: 5;
+    bottom: 60px;
+    right: 0px;
+    width: 90px;
+    height: 70px;
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    border-radius: 50px 0% 0% 50px;
+}
+
+#question-ai button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    margin-left: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-in-out 0.2s, transform ease-in-out 0.2s;
+}
+
+#question-ai button:hover {
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+#question-ai button:hover i {
+    color: var(--red);
+}
+
+#question-ai button i {
+    font-size: var(--medium-m);
+    color: var(--white);
+    transition: color ease-in-out 0.2s;
+}
+
 /* Color scheme */
 :root {
     --white: white;
@@ -168,6 +210,17 @@ p {
     }
     button {
         font-size: var(--small-xs) !important;
+    }
+    #question-ai {
+        width: 70px;
+        height: 60px;
+    }
+    #question-ai button {
+        width: 40px;
+        height: 40px;
+    }
+    #question-ai button i {
+        font-size: var(--small-s);
     }
 }
 
