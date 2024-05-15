@@ -303,7 +303,6 @@ header .container .menu:hover {
     left: 0;
     z-index: 6;
     transform: translateX(100%);
-    opacity: 0;
     height: 100%;
     margin-top: -90px;
     width: 100%;
@@ -315,7 +314,6 @@ header .container .menu:hover {
 }
 
 #menu.is-active {
-    opacity: 1;
     transform: translateX(0);
     transition: ease-in-out 0.3s, background-color 2s;
 }
