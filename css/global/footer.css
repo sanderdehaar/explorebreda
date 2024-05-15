@@ -110,12 +110,12 @@ footer .container .top ul li input:focus {
 footer .container .top ul li button {
     position: relative;
     top: 2px;
-    width: 56px;
-    height: 56px;
+    width: 55px;
+    height: 55px;
     background-color: var(--white);
-    border: none;
-    border-radius: 10px;
-    margin-left: -50px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-left: -54px;
 }
 
 footer .container .top ul li button::placeholder p {

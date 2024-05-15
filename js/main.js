@@ -1,13 +1,15 @@
 // Glide.js
 
-var glideMulti1 = new Glide('.multi1', {
-    type: 'carousel',
-    autoplay: 0,
-    perView: 5,
-    keyboard: true
-});
+if (document.querySelector('.multi1')) {
+    var glideMulti1 = new Glide('.multi1', {
+        type: 'carousel',
+        autoplay: 0,
+        perView: 5,
+        keyboard: true
+    });
 
-glideMulti1.mount();
+    glideMulti1.mount();
+}
 
 // Header toggle, change colors
 
