@@ -65,7 +65,7 @@
 
 @media only screen and (max-width: 900px) {
     #hero-locations .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 35px;
     }
     #hero-locations .container img {
@@ -73,13 +73,13 @@
         min-width: 0;
         min-height: 200px;
     }
+    #hero-locations .container {
+        padding-top: 0px;
+        padding-bottom: 35px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
-    #hero-locations .container {
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
     #hero-locations .container .information a button {
         padding: 16px 40px;
     }
