@@ -362,7 +362,6 @@ header .container .menu:hover {
 
 #menu .box {
     height: 100%;
-    min-height: 780px;
     max-width: 768px;
     width: 100%;
     background-color: white;
@@ -416,10 +415,204 @@ header .container .menu:hover {
     background-color: var(--red_hover);
 }
 
+/* Navigation */
+#menu .box .information .main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+#menu .box .information .main ul li {
+    font-size: 32px;
+    font-family: var(--fontOne);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#menu .box .information .main ul li.is-active {
+    color: var(--red);
+}
+
+#menu .box .information .main ul li:hover {
+    color: var(--red);
+}
+
+/* Bottom settings */
+
+#menu .box .information .bottom {
+    background-color: var(--white);
+    border-top: 2px solid var(--main);
+    padding-top: 35px;
+    margin-bottom: 35px;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 6.3rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu .box .information .bottom .profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#menu .box .information .bottom .profile button {
+    width: 60px;
+    height: 60px;
+    background-color: var(--red);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#menu .box .information .bottom .profile button:hover {
+    cursor: pointer;
+    background-color: var(--red_hover);
+}
+
+#menu .box .information .bottom .profile button i {
+    color: var(--white);
+    font-size: var(--medium-m);
+}
+
+#menu .box .information .bottom .profile p {
+    font-size: var(--small-s);
+    color: var(--main);
+}
+
+#menu .box .information .bottom .socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#menu .box .information .bottom .socials .social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .box .information .bottom .socials .social:hover {
+    border: 2px solid var(--main);
+    cursor: pointer;
+}
+
+#menu .box .information .bottom .socials .social:hover i {
+    color: var(--main);
+}
+
+#menu .box .information .bottom .socials .social i {
+    color: var(--red);
+    font-size: var(--small-s);
+}
+
+#menu .box .information .bottom .small-banner {
+    position: absolute;
+    object-fit: cover;
+    top: -235px;
+    height: 200px;
+    width: 100%;
+    background-color: var(--main);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .box .information .bottom .small-banner img {
+    position: absolute;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    opacity: 0.8;
+    transition: ease-in-out 0.4s;
+}
+
+#menu .box .information .bottom .small-banner:hover img {
+    transform: scale(1.1);
+    transition: ease-in-out 0.4s;
+}
+
+#menu .box .information .bottom .small-banner a button {
+    position: relative;
+    z-index: 3;
+    padding: 18px 50px;
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: var(--small-xs);
+    font-family: var(--fontOne);
+}
+
+#menu .box .information .bottom .small-banner a button:hover {
+    cursor: pointer;
+    background-color: var(--red_hover);
+}
+
 /* mobile size header */
 @media only screen and (max-width: 900px) {
     header .container ul span:not(.menu span),
     header .container ul li {
         display: none !important;
+    }
+    #menu .box .information .main ul {
+        gap: 25px;
+    }
+    #menu .box .information .main ul li {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #menu .box .information .main ul {
+        gap: 15px;
+    }
+    #menu .box .information .main ul li {
+        font-size: var(--medium-m);
+    }
+    #menu .box .information .bottom {
+        padding-top: 15px;
+    }
+    #menu .box .information .bottom .small-banner {
+        height: 120px;
+    }
+    #menu .box .information .bottom .small-banner img {
+        height: 120px;
+    }
+    #menu .box .information .bottom .small-banner {
+        top: -145px;
+    }
+    #menu .box .information .bottom .small-banner a button {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+    #menu .box .information .bottom .profile p {
+        display: none;
+    }
+    #menu .box .information .bottom .socials {
+        gap: 8px;
+    }
+    #menu .box .information .bottom .socials .social {
+        width: 30px;
+        height: 30px;
+    } 
+    #menu .box .information .bottom .socials .social i {
+        font-size: var(--small-xs);
+    }
+    #menu .box .information .bottom .profile button {
+        width: 60px;
+        height: 60px;
+    } 
+    #menu .box .information .bottom .profile button i {
+        font-size: var(--small-s);
     }
 }
