@@ -53,6 +53,10 @@ a {
     display: flex;
 }
 
+.account-page {
+    background-color: var(--red);
+}
+
 /* Alert */
 #alert {
     position: absolute;
@@ -84,6 +88,17 @@ a {
 
 #alert p {
     color: var(--white);
+}
+
+/* Alert for login/register different */
+
+.account-page-alert {
+    background-color: var(--white) !important;
+}
+
+.account-page-alert h3,
+.account-page-alert p {
+    color: var(--red) !important;
 }
 
 /* Color scheme */
