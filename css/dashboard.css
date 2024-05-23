@@ -76,6 +76,18 @@
     height: 100%;
 }
 
+.progress-level-up {
+    width: 10%; 
+    background-color: red;
+    height: 100%;
+}
+
+.progress-done {
+    width: 100%; 
+    background-color: rgb(64, 140, 56);
+    height: 100%;
+}
+
 .bar-plus-item {
     
     display: flex;
@@ -86,6 +98,18 @@
 .points {
     font-size: 20px;
     font-weight: bolder;
+}
+
+.check-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.check-icon-daily {
+    padding-left: 7px;
+    padding-top: 10px;
+    width: 35px;
+    height: 35px;
 }
 
 .quests {
