@@ -49,8 +49,6 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
         videoContainer.appendChild(videoInfo);
         videoGrid.appendChild(videoContainer);
     }
-
-    alert('Videos uploaded successfully!');
 });
 
 

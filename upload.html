@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/hero/banner.css">
     <link rel="stylesheet" type="text/css" href="css/hero/home.css">
     <link rel="stylesheet" type="text/css" href="css/upload.css"> <!-- Add this line for new styles -->
+    <link rel="stylesheet" href="/css/popup.css">
     <!-- extra links -->
     <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
@@ -23,7 +24,7 @@
             <!-- website logo -->
             <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Explorebreda logo" /><img src="assets/img/logo.png" alt="Explorebreda logo" /></a>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Stories<i class="fa-solid fa-caret-down"></i></a></li>
                 <li><a href="#">Discover Breda</a></li>
                 <li><a href="#">Contact</a></li>
@@ -33,7 +34,7 @@
                         <div class="head"></div>
                         <ul>
                             <li><a href="#"><i class="fa-solid fa-camera-retro"></i>My stories</a></li>
-                            <li><a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+                            <li><a href="dashboardUp.html"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
                             <li><a href="#"><i class="fa-solid fa-user"></i>Account details</a></li>
                             <li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
                         </ul>
@@ -67,6 +68,42 @@
                         <span></span>
                     </div>
                 </div>
+                <div class="main">
+                    <ul>
+                        <li class="is-active"><a href="index.html">Home</a></li>
+                        <li><a href="#">Stories</a></li>
+                        <li><a href="#">Discover Breda</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>  
+                <div class="bottom">
+                    <div class="small-banner">
+                        <img src="assets/img/background.jpg"/>
+                        <a href="#"><button>See news</button></a>
+                    </div>
+                    <div class="profile">
+                        <a href="#">
+                            <button>
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                        </a>
+                        <p id="account_name"></p>
+                    </div>
+                    <div class="socials">
+                        <div class="social">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="social">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="social">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -77,8 +114,8 @@
             <img src="./assets/img/Breda2.jpg" alt="Center of Breda with shops and people walking through it" />
             <div class="container">
                 <div class="box">
-                    <h1>Discover Breda's hidden gems</h1>
-                    <h1>and share your adventures</h1>
+                    <h1>Uploads</h1>
+                    <h1>Become the inspiration for many</h1>
                 </div>
             </div>
             <div class="overlay"></div>
@@ -101,12 +138,19 @@
             <form id="uploadForm">
                 <input type="text" id="username" placeholder="Your Name" required>
                 <input type="file" id="fileInput" multiple>
-                <button type="submit" id="uploadButton">Upload</button>
+                <button type="submit" id="openPopup">Upload</button>
             </form>
             <div class="video-previews" id="videoPreviews">
                 <!-- Thumbnails will be shown here -->
             </div>
         </section>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close">&times;</span>
+                <p id="text" >Congratulations! You earned points!</p>
+                <img class="animation" src="assets/img/Breda.gif" alt="Popup GIF">
+            </div>
+        </div>
         <section class="videos-section">
             <h2>Videos from locals to locals:</h2>
             <p>a look at videos created with clips uploaded by other locals</p>
@@ -131,7 +175,22 @@
         </section>
     </main>
     <div id="alert"></div>
-    <script src="script.js"></script>
+        <!-- The core Firebase (required) -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <!-- firebase libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+        <!-- firebase database connection -->
+        <script src="js/database.js"></script>
+        <!-- Glide.js -->
+        <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+        <script>
+            new Glide('.glide').mount()
+        </script>
+        <!-- JS files -->
+        <script src="js/account.js"></script>
+        <script src="js/main.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
 
