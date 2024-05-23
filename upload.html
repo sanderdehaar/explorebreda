@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/global/global.css">
+    <link rel="stylesheet" type="text/css" href="css/global/header.css">
+    <link rel="stylesheet" type="text/css" href="css/hero/banner.css">
+    <link rel="stylesheet" type="text/css" href="css/hero/home.css">
+    <link rel="stylesheet" type="text/css" href="css/upload.css"> <!-- Add this line for new styles -->
+    <!-- extra links -->
+    <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Website title -->
+    <title>Explorebreda - Home</title>
+</head>
+<body id="pagewrapper">
+    <!-- Page Header -->
+    <header id="global-header">
+        <div class="container">
+            <!-- website logo -->
+            <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Explorebreda logo" /><img src="assets/img/logo.png" alt="Explorebreda logo" /></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Stories<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Discover Breda</a></li>
+                <li><a href="#">Contact</a></li>
+                <li id="account_status">
+                    <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown">
+                        <div class="head"></div>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-camera-retro"></i>My stories</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+                            <li><a href="#"><i class="fa-solid fa-user"></i>Account details</a></li>
+                            <li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="login_status">
+                    <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown">
+                        <div class="head"></div>
+                        <ul>
+                            <li><p>Not logged in.</p></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <!-- menu -->
+    <div id="menu">
+        <div class="box">
+            <div class="information">
+                <div class="head">
+                    <h2>Menu</h2>
+                    <div class="menu close-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main information -->
+    <main>
+        <!-- Hero banner with homepage information -->
+        <section id="hero-banner">
+            <img src="./assets/img/Breda2.jpg" alt="Center of Breda with shops and people walking through it" />
+            <div class="container">
+                <div class="box">
+                    <h1>Discover Breda's hidden gems</h1>
+                    <h1>and share your adventures</h1>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </section>
+        <div class="overlay-banner">
+            <div class="box">
+            </div>
+        </div>
+        <section id="hero-home">
+            <div class="container">
+                <!-- <h2>Homepage</h2>
+                <p id="account_name"></p>
+                <p id="account_email"></p> -->
+            </div>
+        </section>
+
+        <!-- New sections for upload and videos -->
+        <section class="upload-section">
+            <h2>Upload 3 short clips from 1 to 3 seconds from your favorite place in Breda and see them posted on our social media</h2>
+            <form id="uploadForm">
+                <input type="text" id="username" placeholder="Your Name" required>
+                <input type="file" id="fileInput" multiple>
+                <button type="submit" id="uploadButton">Upload</button>
+            </form>
+            <div class="video-previews" id="videoPreviews">
+                <!-- Thumbnails will be shown here -->
+            </div>
+        </section>
+        <section class="videos-section">
+            <h2>Videos from locals to locals:</h2>
+            <p>a look at videos created with clips uploaded by other locals</p>
+            <div class="video-grid" id="videoGrid">
+                <div class="video-container">
+                    <video src="./assets/videos/VideoTemplate1.mp4" controls></video>
+                    <div class="video-info">@User1</div>
+                </div>
+                <div class="video-container">
+                    <video src="assets/videos/VideoTemplate2.mp4" controls></video>
+                    <div class="video-info">@User2</div>
+                </div>
+                <div class="video-container">
+                    <video src="assets/videos/VideoTemplate3.mp4" controls></video>
+                    <div class="video-info">@User3</div>
+                </div>
+                <div class="video-container">
+                    <video src="assets/videos/VideoTemplate4.mp4" controls></video>
+                    <div class="video-info">@User4</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="alert"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
