@@ -6,24 +6,27 @@
 }
 
 .account-page {
-    background-color: var(--red);
+    background-color: var(--var(--red));
     background-image: url(/assets/img/background.jpg);
 }
 
 .dashboard-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin-top: 5%;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .dashboard-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 2px 2px 5px black;
-    padding: 20px;
+    background-color: var(--white);
+    padding: 35px;
     text-align: left;
     flex: 1;
     margin: 10px;
+    width: 100%;
+    min-width: 400px;
 }
 
 #avatar-image {
@@ -32,11 +35,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 50%;
-    border: 3px solid red;
+    border: 3px solid var(--red);
 }
 
 #account-id {
-    color: red;
+    color: var(--red);
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -67,18 +70,16 @@
     border: 1px solid #ccc;
     overflow: hidden;
     height: 20px;
-    margin-top: 20px;
 }
 
 .progress {
     width: 90%; 
-    background-color: red;
+    background-color: var(--red);
     height: 100%;
 }
 
 .progress-level-up {
     width: 10%; 
-    background-color: red;
     height: 100%;
 }
 
@@ -89,7 +90,6 @@
 }
 
 .bar-plus-item {
-    
     display: flex;
     align-items: center;
     gap: 30px;
@@ -106,8 +106,6 @@
 }
 
 .check-icon-daily {
-    padding-left: 7px;
-    padding-top: 10px;
     width: 35px;
     height: 35px;
 }
@@ -124,27 +122,37 @@
 
 .circle-container {
     display: flex;
-    justify-content: space-between;
     width: fit-content;
-    padding: 10px;
+    flex-wrap: wrap;
+    padding: 5px;
 }
 
 .circle-checked {
     width: 50px;
     height: 50px;
-    background-color: red;
-    border: solid 1px #ccc;
+    background-color: var(--red);
     border-radius: 50%;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-checked i {
+    font-size: 18px;
+    color: var(--white);
 }
 
 .circle-unchecked {
     width: 50px;
     height: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: #f3f3f3;
     border: solid 1px #ccc;
     border-radius: 50%;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .uploads {
@@ -158,3 +166,27 @@
     height: 300px;
 }
 
+@media only screen and (max-width: 920px) {
+    .dashboard-container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .dashboard-box {
+        min-width: 0%;
+        width: calc(100% - 50px - 2.6rem);
+    }
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .uploads {
+        flex-direction: column;
+    }
+    .uploads img {
+       width: 100%;
+       object-fit: cover;
+    }
+}
