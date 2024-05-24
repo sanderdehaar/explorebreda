@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,18 @@
     <link rel="stylesheet" type="text/css" href="css/global/header.css">
     <link rel="stylesheet" type="text/css" href="css/hero/banner.css">
     <link rel="stylesheet" type="text/css" href="css/hero/home.css">
-    <link rel="stylesheet" type="text/css" href="css/upload.css"> <!-- Add this line for new styles -->
-    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" type="text/css" href="css/upload.css">
+    <!-- Add this line for new styles -->
+    <link rel="stylesheet" href="css/popup.css">
     <!-- extra links -->
     <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Website title -->
-    <title>Explorebreda - Home</title>
+    <title>Explorebreda - Upload</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_icon.ico">
 </head>
+
 <body id="pagewrapper">
     <!-- Page Header -->
     <header id="global-header">
@@ -45,7 +49,9 @@
                     <div class="dropdown">
                         <div class="head"></div>
                         <ul>
-                            <li><p>Not logged in.</p></li>
+                            <li>
+                                <p>Not logged in.</p>
+                            </li>
                             <li><a href="login.html">Login</a></li>
                         </ul>
                     </div>
@@ -75,10 +81,10 @@
                         <li><a href="#">Discover Breda</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                </div>  
+                </div>
                 <div class="bottom">
                     <div class="small-banner">
-                        <img src="assets/img/background.jpg"/>
+                        <img src="assets/img/background.jpg" />
                         <a href="#"><button>See news</button></a>
                     </div>
                     <div class="profile">
@@ -124,77 +130,70 @@
             <div class="box">
             </div>
         </div>
-        <section id="hero-home">
-            <div class="container">
-                <!-- <h2>Homepage</h2>
-                <p id="account_name"></p>
-                <p id="account_email"></p> -->
-            </div>
-        </section>
 
         <!-- New sections for upload and videos -->
-        <section class="upload-section">
-            <h2>Upload 3 short clips from 1 to 3 seconds from your favorite place in Breda and see them posted on our social media</h2>
-            <form id="uploadForm">
-                <input type="text" id="username" placeholder="Your Name" required>
-                <input type="file" id="fileInput" multiple>
-                <button type="submit" id="openPopup">Upload</button>
-            </form>
-            <div class="video-previews" id="videoPreviews">
-                <!-- Thumbnails will be shown here -->
+        <section id="upload-section">
+            <div class="container">
+                <h2>Upload 3 short clips from 1 to 3 seconds from your favorite place in Breda and see them posted on our social media</h2>
+                <form id="uploadForm">
+                    <input type="text" id="username" placeholder="Your Name" required>
+                    <input type="file" id="fileInput" multiple>
+                    <button type="submit" id="openPopup">Upload</button>
+                </form>
+                <div class="video-previews" id="videoPreviews">
+                    <!-- Thumbnails will be shown here -->
+                </div>
             </div>
         </section>
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span id="closePopup" class="close">&times;</span>
-                <p id="text" >Congratulations! You earned points!</p>
+                <p id="text">Congratulations! You earned points!</p>
                 <img class="animation" src="assets/img/Breda.gif" alt="Popup GIF">
             </div>
         </div>
-        <section class="videos-section">
-            <h2>Videos from locals to locals:</h2>
-            <p>a look at videos created with clips uploaded by other locals</p>
-            <div class="video-grid" id="videoGrid">
-                <div class="video-container">
-                    <video src="./assets/videos/VideoTemplate1.mp4" controls></video>
-                    <div class="video-info">@User1</div>
-                </div>
-                <div class="video-container">
-                    <video src="assets/videos/VideoTemplate2.mp4" controls></video>
-                    <div class="video-info">@User2</div>
-                </div>
-                <div class="video-container">
-                    <video src="assets/videos/VideoTemplate3.mp4" controls></video>
-                    <div class="video-info">@User3</div>
-                </div>
-                <div class="video-container">
-                    <video src="assets/videos/VideoTemplate4.mp4" controls></video>
-                    <div class="video-info">@User4</div>
+        <section id="videos-section">
+            <div class="container">
+                <h2>Videos from locals to locals</h2>
+                <p>a look at videos created with clips uploaded by other locals</p>
+                <div class="video-grid" id="videoGrid">
+                    <div class="video-container">
+                        <video src="./assets/videos/VideoTemplate1.mp4" controls></video>
+                        <div class="video-info">@User1</div>
+                    </div>
+                    <div class="video-container">
+                        <video src="assets/videos/VideoTemplate2.mp4" controls></video>
+                        <div class="video-info">@User2</div>
+                    </div>
+                    <div class="video-container">
+                        <video src="assets/videos/VideoTemplate3.mp4" controls></video>
+                        <div class="video-info">@User3</div>
+                    </div>
+                    <div class="video-container">
+                        <video src="assets/videos/VideoTemplate4.mp4" controls></video>
+                        <div class="video-info">@User4</div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <div id="alert"></div>
-        <!-- The core Firebase (required) -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-        <!-- firebase libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-        <!-- firebase database connection -->
-        <script src="js/database.js"></script>
-        <!-- Glide.js -->
-        <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-        <script>
-            new Glide('.glide').mount()
-        </script>
-        <!-- JS files -->
-        <script src="js/account.js"></script>
-        <script src="js/main.js"></script>
-        <script src="script.js"></script>
+    <!-- The core Firebase (required) -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <!-- firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- firebase database connection -->
+    <script src="js/database.js"></script>
+    <!-- Glide.js -->
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+        new Glide('.glide').mount()
+    </script>
+    <!-- JS files -->
+    <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
-
-
-
-
-

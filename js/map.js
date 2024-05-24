@@ -51,4 +51,8 @@ circle4.on('click', function() {
 });
 circle5.on('click', function() {
     window.open('http://inkannenenkruikenbreda.nl');
+    radius: 100
+}).addTo(map);
+circle1.on('click', function() {
+    window.open('https://www.annemax.nl');
 });
