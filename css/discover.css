@@ -9,7 +9,7 @@
     align-items: center;
 
 }
-.container {
+#discover-breda-map .container {
     height: 100%;
     width: 80%;
     display: flex;
@@ -17,7 +17,7 @@
     justify-content: center;
 }
 
-.map-container {
+#discover-breda-map .container .map-container {
     width: 500px;
     border: solid 1px black;
 }
