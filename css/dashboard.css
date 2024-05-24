@@ -1,0 +1,160 @@
+.panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.account-page {
+    background-color: var(--red);
+    background-image: url(/assets/img/background.jpg);
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.dashboard-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 5px black;
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+    margin: 10px;
+}
+
+#avatar-image {
+    height: 400px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+#account-id {
+    color: red;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.badge-plus-item {
+    background-color: rgba(227, 227, 227, 0,8);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.badge-image {
+    width: 50px;
+    height: 50px;
+    
+}
+
+#BadgeName {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 70%;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.progress {
+    width: 90%; 
+    background-color: red;
+    height: 100%;
+}
+
+.progress-level-up {
+    width: 10%; 
+    background-color: red;
+    height: 100%;
+}
+
+.progress-done {
+    width: 100%; 
+    background-color: rgb(64, 140, 56);
+    height: 100%;
+}
+
+.bar-plus-item {
+    
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.points {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.check-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.check-icon-daily {
+    padding-left: 7px;
+    padding-top: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.quests {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.daily {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    padding: 10px;
+}
+
+.circle-checked {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: solid 1px #ccc;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.circle-unchecked {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px #ccc;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.uploads {
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+}
+
+.upload-image {
+    width: 150px;
+    height: 300px;
+}
+

@@ -13,21 +13,23 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Website title -->
     <title>Explorebreda - Account</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo_icon.ico">
 </head>
     <!-- Pagewrapper information -->
 
-    <body id="pagewrapper">
+    <body id="pagewrapper" class="account-page">
         <!-- Page Header -->
-        <header>
+        <header id="global-header" class="light">
             <div class="container">
                 <!-- website logo -->
-                <a class="logo" href="index.html">GENZ</a>
+                <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Explorebreda logo" /><img src="assets/img/logo.png" alt="Explorebreda logo" /></a>
                 <ul>
-                    <li><a href="#">Our brand</a></li>
-                    <li><a href="collections.html">Collection 2024<i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Stories<i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#">Discover Breda</a></li>
                     <li><a href="#">Contact</a></li>
                     <li id="account_status">
-                        <a href="#">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown">
                             <div class="head"></div>
                             <ul>
@@ -39,7 +41,7 @@
                         </div>
                     </li>
                     <li id="login_status">
-                        <a href="#">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown">
                             <div class="head"></div>
                             <ul>
@@ -55,28 +57,90 @@
                 </ul>
             </div>
         </header>
+        <!-- menu -->
+        <div id="menu">
+            <div class="box">
+                <div class="information">
+                    <div class="head">
+                        <h2>Menu</h2>
+                        <div class="menu close-menu">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <ul>
+                            <li class="is-active"><a href="#">Home</a></li>
+                            <li><a href="#">Stories</a></li>
+                            <li><a href="#">Discover Breda</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom">
+                        <div class="small-banner">
+                            <img src="assets/img/background.jpg"/>
+                            <a href="#"><button>See news</button></a>
+                        </div>
+                        <div class="profile">
+                            <a href="#">
+                                <button>
+                                    <i class="fa-solid fa-user"></i>
+                                </button>
+                            </a>
+                            <p id="account_name"></p>
+                        </div>
+                        <div class="socials">
+                            <div class="social">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="social">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="social">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <div class="social">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <main>
             <section id="hero-account">
-                <div class="container">
+                <div class="container register">
                     <form>
                         <div class="head">
                             <h2>Register</h2>
                         </div>
-                
+                        <label for="full_name">Full name</label>
                         <input type="text" id="full_name" name="full_name" placeholder="Full name">
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email">
+                        <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Password">
+                        <label for="confirm-password">Confirm Password</label>
                         <input type="password" id="confirm-password" name="password" placeholder="Confirm Password">
-                
+                        <p>Already have an account?<a href="login.html">Login</a></p>
+        
                         <div class="buttons">
                             <button type="button" onclick="register()">Register</button>
-                            <p>Already have an account?<a href="login.html">Login</a></p>
                         </div>
                     </form>
+                    <div class="slider_dots">
+                        <span></span>
+                        <span class="is-active"></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+                <div class="image-overlay">
+                    <img src="assets/img/location.png" />
                 </div>
             </section>
         </main>
-        <div id="alert"></div>
+        <div id="alert" class="account-page-alert"></div>
     </body>
     <!-- The core Firebase (required) -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -86,4 +150,5 @@
     <!-- firebase database connection -->
     <script src="js/database.js"></script>
     <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
 </html>

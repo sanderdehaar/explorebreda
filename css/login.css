@@ -1,16 +1,184 @@
 /* Hero section account */
-#hero-account form {
+#hero-account {
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#hero-account .container {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+#hero-account .register {
+    min-height: 750px;
+}
+
+#hero-account .container form {
+    margin-top: 45px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
 }
 
-#hero-account form .buttons span {
+#hero-account .container form .head h2 {
+    margin-bottom: 45px;
+    color: var(--white);
+}
+
+#hero-account .container form label {
+    font-size: var(--small-s);
+    color: var(--white);
+    font-family: var(--fontOne);
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#hero-account .container form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 20px;
+    border: 2px solid var(--white);
+    background-color: transparent;
+    font-size: var(--small-xs);
+    color: var(--white);
+    font-family: var(--fontOne);
+}
+
+#hero-account .container form input:focus {
+    outline: none !important;
+}
+
+#hero-account .container form input::placeholder {
+    font-size: var(--small-xs);
+    color: var(--white);
+    font-family: var(--fontOne);
+}
+
+#hero-account .container form p {
+    font-size: var(--small-s);
+    color: var(--white);
+    margin-top: 15px;
+}
+
+#hero-account .container form p a {
+    margin-left: 5px;
     text-decoration: underline;
-    margin-left: 6px;
 }
 
-#hero-account form .buttons span:hover {
+#hero-account .container form button {
+    padding: 18px 50px;
+    border: none;
+    background-color: var(--white);
+    color: var(--red);
+    font-size: var(--small-xs);
+    font-family: var(--fontOne);
+    margin-top: 60px;
+    font-weight: 500;
+}
+
+#hero-account .container form button:hover {
     cursor: pointer;
+}
+
+#hero-account .overlay {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    margin-top: -90px;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+}
+
+#hero-account .image-overlay {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    margin-top: -90px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+#hero-account .container .slider_dots {
+    margin-top: 45px;
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: -8px;
+}
+
+#hero-account .container .slider_dots span {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 2px solid var(--white);
+}
+
+#hero-account .container .slider_dots span.is-active {
+    background-color: var(--white);
+}
+
+#hero-account .container .slider_dots span:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+    #hero-account .container .slider_dots,
+    #hero-account .image-overlay {
+        display: none;
+    }
+    #hero-account .overlay {
+        width: 100vw;
+    }
+    #hero-account .container form input {
+        width: initial;
+    }
+    #hero-account .container {
+        display: flex;
+        justify-content: center;
+    }
+    #hero-account .container form {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 0px;
+    }
+    #hero-account .container form input {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #hero-account .container form label {
+        font-size: var(--small-xs);
+    }
+    #hero-account .container form input {
+        font-size: var(--small-xs);
+    }
+    #hero-account .container form p {
+        font-size: var(--small-xs);
+    }
+    #hero-account .container form .head h2 {
+        margin-bottom: 15px;
+    }
+    #hero-account .container form button {
+        margin-top: 30px;
+    }
 }

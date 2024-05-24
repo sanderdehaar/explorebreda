@@ -124,6 +124,7 @@
 }
 
 .overlay-banner a button i {
+    color: var(--red);
     font-size: var(--medium-m);
     transition: ease-in-out 0.2s;
 }

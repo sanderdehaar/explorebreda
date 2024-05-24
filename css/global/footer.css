@@ -1,0 +1,205 @@
+footer {
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    left: 0;
+    width: 100vw;
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+}
+
+footer .container {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer .container .top .main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .container .top .main .logo {
+    color: var(--white);
+    font-family: var(--fontTwo);
+    font-size: var(--large-xl);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+footer .container .top .main .logo img {
+    height: 58px;
+}
+
+footer .container .top .main p {
+    color: var(--gray);
+    font-size: var(--small-xs);
+    max-width: 400px;
+}
+
+footer .container .top ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .container .top ul h3,
+footer .container .top ul a:first-child li {
+    color: var(--white);
+    font-size: var(--medium-m);
+    font-family: var(--fontOne);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .container .top ul li {
+    color: var(--gray);
+    font-size: var(--small-xs);
+    font-family: var(--fontOne);
+    font-weight: 500;
+}
+
+footer .container .top ul a li {
+    transition: ease-in-out 0.2s;
+}
+
+footer .container .top ul a li:hover {
+    cursor: pointer;
+    color: var(--white);
+    transform: translateX(10px);
+    transition: ease-in-out 0.2s;
+}
+
+footer .container .top ul li p {
+    color: var(--gray);
+    font-size: var(--small-xs);
+    font-weight: 400;
+    max-width: 500px;
+}
+
+footer .container .top ul li input {
+    margin-top: 15px;
+    width: 160px;
+    height: 30px;
+    color: var(--white);
+    font-size: var(--small-xs);
+    font-weight: 400;
+    padding: 10px 28px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid var(--red);
+    padding-right: 66px;
+}
+
+footer .container .top ul li input:focus {
+    outline: none !important;
+}
+
+footer .container .top ul li button {
+    position: relative;
+    top: 2px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-left: -54px;
+}
+
+footer .container .top ul li button::placeholder p {
+    color: var(--gray);
+}
+
+footer .container .top ul li button:hover {
+    cursor: pointer;
+}
+
+footer .container .top ul li button i {
+    color: var(--main);
+    font-size: var(--medium-m);
+}
+
+footer .container .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+footer .container .bottom p {
+    color: var(--gray);
+    font-size: var(--small-xs);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 1400px) {
+    footer .container .top .main p {
+        max-width: 300px;
+    }
+    footer .container .top ul li p {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    footer .container .top .main p {
+        max-width: 200px;
+    }
+    footer .container .top ul li p {
+        max-width: 200px;
+    }
+    footer .container .top {
+        flex-wrap: wrap;
+        row-gap: 35px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    footer .container .top {
+        flex-wrap: wrap;
+    }
+    footer .container .top ul {
+        min-width: 50%;
+    }
+    footer .container .top .main .logo img {
+        height: 42px;
+    }
+    footer .container .top ul h3,
+    footer .container .top ul a:first-child li {
+        font-size: var(--small-s);
+    }
+    footer .container .bottom p {
+        font-size: var(--small-xs);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    footer .container .top {
+        flex-direction: column;
+    }
+    footer .container .top ul {
+        min-width: 100%;
+    }
+    footer .container .bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+    footer .container .top .main p {
+        max-width: 100%;
+    }
+    footer .container .top ul li p {
+        max-width: 100%;
+    }
+}
