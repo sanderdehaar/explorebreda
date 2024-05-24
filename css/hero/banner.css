@@ -55,10 +55,14 @@
 #discover-banner .container .box a button{
     padding: 18px 50px;
     border: none;
-    background-color: #93278f;
+    background-color: var(--purple);
     color: var(--white);
     font-size: var(--small-xs);
     font-family: var(--fontOne);
+}
+#discover-banner .container .box a button:hover{
+    cursor: pointer;
+    background-color: var(--purple_hover);
 }
 
 #hero-banner .container .box h1 {

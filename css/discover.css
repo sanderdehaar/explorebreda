@@ -7,6 +7,8 @@
     height: 600px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: var(--red);
 
 }
 #discover-breda-map .container {
@@ -18,10 +20,9 @@
 }
 
 #discover-breda-map .container .map-container {
-    width: 500px;
+    width: 600px;
     border: solid 1px black;
 }
-    
 #map {
     height: 400px;
     width: 100%;
@@ -33,4 +34,17 @@
     justify-items: start;
     align-content: space-evenly;
     padding-left: 90px;
+    color: var(--white);
+}
+.discover-map-text a button{
+    padding: 18px 50px;
+    border: none;
+    background-color: var(--white);
+    color: var(--red);
+    font-size: var(--small-s);
+    font-family: var(--fontOne);
+}
+.discover-map-text a button:hover{
+    cursor: pointer;
+    background-color: var(--gray);
 }
