@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/global/global.css">
+    <link rel="stylesheet" type="text/css" href="css/global/header.css">
+    <link rel="stylesheet" type="text/css" href="css/hero/banner.css">
+    <link rel="stylesheet" type="text/css" href="css/hero/home.css">
+    <link rel="stylesheet" type="text/css" href="css/stories.css">
+    <!-- extra links -->
+    <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Website title -->
+    <title>Explorebreda - Home</title>
+</head>
+    <!-- Pagewrapper information -->
+
+    <body id="pagewrapper">
+        <!-- Page Header -->
+        <header id="global-header">
+            <div class="container">
+                <!-- website logo -->
+                <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Explorebreda logo" /><img src="assets/img/logo.png" alt="Explorebreda logo" /></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li id="stories-drop">
+                        <a href="#" class="dropdown_row">Stories<i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li><a href="#">Discover Breda</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="account_status">
+                        <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <div class="head"></div>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-camera-retro"></i>My stories</a></li>
+                                <li><a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+                                <li><a href="#"><i class="fa-solid fa-user"></i>Account details</a></li>
+                                <li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="login_status">
+                        <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown">
+                            <div class="head"></div>
+                            <ul>
+                                <li><p>Not logged in.</p></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <div class="menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <!-- menu -->
+        <div id="menu">
+            <div class="box">
+                <div class="information">
+                    <div class="head">
+                        <h2>Menu</h2>
+                        <div class="menu close-menu">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main information -->
+        <main>
+            <!-- Hero banner with homepage information -->
+            <section id="hero-banner">
+                <img src="assets/img/background.jpg" alt="Center of Breda with shops and people walking through it" />
+                <div class="container">
+                    <div class="box">
+                        <h1>Discover Breda's hidden gems</h1>
+                        <h1>and share your adventures</h1>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </section>
+            <div class="overlay-banner">
+                <div class="box">
+                    <a href="test.html"><button><i class="fa-solid fa-arrow-right"></i></button></a>
+                </div>
+            </div>
+            <section id="hero-home">
+                <div class="container">
+                    <!-- <h2>Homepage</h2>
+                    <p id="account_name"></p>
+                    <p id="account_email"></p> -->
+                </div>
+            </section>
+            <section id="stories-menu">
+                <div class="container">
+                    <div class="box">
+                        <h3 class="box-header">Categories</h3>
+                        <div class="box-content">
+                            <ul>
+                                <li><a href="https://www.explorebreda.com/en/events">Events</a></li>
+                                <li><a href="https://www.explorebreda.com/en/see-do/food-and-drinks">Dining</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Nightlife</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Local Attracions</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Community News</a></li>
+                                <li><a href="https://www.explorebreda.com/en/see-do/shopping">Shopping</a></li>
+                                <li><a href="https://www.explorebreda.com/en/see-do/culture">Arts & Culture</a></li>
+                                <li><a href="https://www.explorebreda.com/en/see-do/activities-entertainment">Outdoor Activities</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Family Friendly</a></li>
+                                <li><a href="https://www.explorebreda.com/en/work-study/business-life">Local Businesses</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Wellness & Fitness</a></li>
+                                <li><a href="https://www.explorebreda.com/en/accessibility">Transportation</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Sustainability</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Historical & Heritage</a></li>
+                                <li><a href="https://www.explorebreda.com/en/city-surroundings/neighbourhoods">Neighbourhood Spotlights</a></li>
+                                <li><a href="https://www.explorebreda.com/en/work-study">Education</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Technology & Innovation</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Civic Engagement</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Diversity & Inclusion</a></li>
+                                <li><a href="https://www.explorebreda.com/en">Pet-Friendly</a></li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+
+                    <div class="box-2">
+                        <h3 class="box-header">Trending</h3>
+                        <div class="box-content">
+                            <div class="box2-img">
+                                <h2>Events</h2>
+                                <img src="assets/img/trending1.svg" alt="">
+                            </div>
+                            <div class="box2-img">
+                                <h2>Nightlife</h2>
+                                <img src="assets/img/trending2.svg" alt="">
+                            </div>
+                            <div class="box2-img">
+                                <h2>Events</h2>
+                                <img src="assets/img/trending1.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-3">
+                        <div class="box-header"> </div>
+                        <div class="box-content">
+                            <h2>Discover Breda and share & post videos together</h2>
+                            <img class="img1" src="assets/img/Rectangle 231.svg" alt="">
+                            <button class="stories-btn1"> Join our program</button>
+                        </div>
+                    </div>
+
+                    <div class="box-3">
+                        <div class="box-header"></div>
+                        <div class="box-content">
+                            <h2>The official launch of explorebreda.nl is close...</h2>
+                        <button class="stories-btn2"> Read more</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <div id="alert"></div>
+    </body>
+    <!-- The core Firebase (required) -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <!-- firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- firebase database connection -->
+    <script src="js/database.js"></script>
+    <!-- JS files -->
+    <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
+</html>

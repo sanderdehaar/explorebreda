@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/global/footer.css">
     <link rel="stylesheet" type="text/css" href="css/hero/banner.css">
     <link rel="stylesheet" type="text/css" href="css/hero/home.css">
-    <link rel="stylesheet" type="text/css" href="css/stories.css">
     <link rel="stylesheet" type="text/css" href="css/hero/locations.css">
+    <link rel="stylesheet" type="text/css" href="css/discover.css">
     <!-- Glide.js -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
@@ -18,6 +18,12 @@
     <script src="https://kit.fontawesome.com/9166a74bb7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <!-- Website title -->
     <title>Explorebreda - Home</title>
     <link rel="icon" type="image/x-icon" href="assets/img/logo_icon.ico">
@@ -32,10 +38,8 @@
                 <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Explorebreda logo" /><img src="assets/img/logo.png" alt="Explorebreda logo" /></a>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li id="stories-drop">
-                        <a href="#" class="dropdown_row">Stories<i class="fa-solid fa-caret-down"></i></a>
-                    </li>
-                    <li><a href="discover.html">Discover Breda</a></li>
+                    <li><a href="#">Stories<i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#">Discover Breda</a></li>
                     <li><a href="#">Contact</a></li>
                     <li id="account_status">
                         <a href="#" class="dropdown_row">Account<i class="fa-solid fa-caret-down"></i></a>
@@ -119,21 +123,14 @@
         <!-- Main information -->
         <main>
             <!-- Hero banner with homepage information -->
-            <section id="hero-banner">
-                <img src="assets/img/background.jpg" alt="Center of Breda with shops and people walking through it" />
+            <section id="discover-banner">
+                <img src="assets/img/Breda4.png" alt="Center of Breda with shops and people walking through it" />
                 <div class="container">
                     <div class="box">
-                        <h1>Share your spots</h1>
-                        <h1>Upload videos of your hidden gems</h1>
+                        <a href="#"><button>Check Stories</button></a>
                     </div>
                 </div>
-                <div class="overlay"></div>
             </section>
-            <div class="overlay-banner">
-                <div class="box">
-                    <a href="upload.html"><button><i class="fa-solid fa-arrow-right"></i></button></a>
-                </div>
-            </div>
             <section id="hero-home">
                 <div class="container">
                     <div class="top">
@@ -208,74 +205,6 @@
                     <p id="account_email"></p> -->
                 </div>
             </section>
-            <section id="stories-menu">
-                <div class="container">
-                    <div class="box">
-                        <h3 class="box-header">Categories</h3>
-                        <div class="box-content">
-                            <ul>
-                                <li><a href="https://www.explorebreda.com/en/events">Events</a></li>
-                                <li><a href="https://www.explorebreda.com/en/see-do/food-and-drinks">Dining</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Nightlife</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Local Attracions</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Community News</a></li>
-                                <li><a href="https://www.explorebreda.com/en/see-do/shopping">Shopping</a></li>
-                                <li><a href="https://www.explorebreda.com/en/see-do/culture">Arts & Culture</a></li>
-                                <li><a href="https://www.explorebreda.com/en/see-do/activities-entertainment">Outdoor Activities</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Family Friendly</a></li>
-                                <li><a href="https://www.explorebreda.com/en/work-study/business-life">Local Businesses</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Wellness & Fitness</a></li>
-                                <li><a href="https://www.explorebreda.com/en/accessibility">Transportation</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Sustainability</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Historical & Heritage</a></li>
-                                <li><a href="https://www.explorebreda.com/en/city-surroundings/neighbourhoods">Neighbourhood Spotlights</a></li>
-                                <li><a href="https://www.explorebreda.com/en/work-study">Education</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Technology & Innovation</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Civic Engagement</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Diversity & Inclusion</a></li>
-                                <li><a href="https://www.explorebreda.com/en">Pet-Friendly</a></li>
-                            </ul>
-                        </div>
-                    
-                    </div>
-
-                    <div class="box-2">
-                        <h3 class="box-header">Trending</h3>
-                        <div class="box-content">
-                            <div class="box2-img">
-                                <h2>Events</h2>
-                                <img src="assets/img/trending1.svg" alt="">
-                            </div>
-                            <div class="box2-img">
-                                <h2>Nightlife</h2>
-                                <img src="assets/img/trending2.svg" alt="">
-                            </div>
-                            <div class="box2-img">
-                                <h2>Events</h2>
-                                <img src="assets/img/trending1.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-3">
-                        <div class="box-header"> </div>
-                        <div class="box-content">
-                            <h2>Discover Breda and share & post videos together</h2>
-                            <img class="img1" src="assets/img/Rectangle 231.svg" alt="">
-                            <button class="stories-btn1"> Join our program</button>
-                        </div>
-                    </div>
-
-                    <div class="box-3">
-                        <div class="box-header"></div>
-                        <div class="box-content">
-                            <h2>The official launch of explorebreda.nl is close...</h2>
-                        <button class="stories-btn2"> Read more</button>
-                        </div>
-                    </div>
-
             <section id="hero-locations">
                 <div class="container">
                     <img src="assets/img/location.jpg" />
@@ -286,6 +215,19 @@
                     </div>
                 </div>
             </section>
+            <!-- map for breda -->
+            <section id="discover-breda-map">
+                <div class="container">
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                    <div class="discover-map-text">
+                        <h3>Discover Breda</h3>
+                        <p>Explore Breda like never before. Uncover hidden gems, popular attractions, and local hotspots at your fingertips. Whether you're planning your next adventure or just curious about what's around, our map offers a comprehensive guide to everything Breda has to offer.</p>
+                    </div>
+                </div>
+            </section>
+            
         </main>
         <footer>
             <div class="container">
@@ -341,4 +283,10 @@
     <!-- JS files -->
     <script src="js/account.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </html>

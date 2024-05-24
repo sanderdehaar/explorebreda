@@ -46,6 +46,45 @@ menu.addEventListener("click", (event) => {
     toggleMenu();
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const storiesDrop = document.getElementById('stories-drop');
+    const heroBanner = document.getElementById('hero-banner');
+    const storiesMenu = document.getElementById('stories-menu');
+    const overlayBanner = document.querySelector('.overlay-banner');
+    let timeoutId;
+
+    function showStoriesMenu() {
+        // heroBanner.style.display = 'none';
+        storiesMenu.style.display = 'flex';
+        // overlayBanner.style.display = 'none';
+        heroBanner.style.zIndex = '1';
+        overlayBanner.style.zIndex = '1';
+        header.classList.add('is-active');
+    }
+
+    function hideStoriesMenu() {
+        // heroBanner.style.display = 'block';
+        storiesMenu.style.display = 'none';
+        // overlayBanner.style.display = 'block';
+        heroBanner.style.zIndex = '2';
+        overlayBanner.style.zIndex = '2';
+        header.classList.remove('is-active');
+    }
+    storiesDrop.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId); 
+        showStoriesMenu();
+    });
+    storiesDrop.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(hideStoriesMenu, 400); 
+    });
+    storiesMenu.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId); 
+        showStoriesMenu();
+    });
+    storiesMenu.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(hideStoriesMenu, 400);
+    });
+});
 document.addEventListener('DOMContentLoaded', (event) => {
     const openPopupBtn = document.getElementById('openPopup');
     const popup = document.getElementById('popup');
