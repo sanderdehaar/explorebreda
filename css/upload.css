@@ -1,14 +1,25 @@
-.upload-section, .videos-section {
-    padding: 40px 20px;
+#upload-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+#upload-section .container h2 {
+    margin-bottom: 35px;
     text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    color: var(--black);
 }
 
-.upload-section h2, .videos-section h2 {
-    margin-bottom: 20px;
-}
-
-.upload-section p, .videos-section p {
-    color: #666;
+#upload-section .container form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 15px;
 }
 
 #uploadForm {
@@ -16,19 +27,18 @@
 }
 
 #username {
-    display: block;
-    margin: 10px auto;
     padding: 10px;
     width: 50%;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    width: calc(100% - 1.3rem);
+    height: 40px;
+    font-family: var(--fontOne);
 }
 
 #fileInput {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
+    padding: 15px 10px;
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -36,24 +46,42 @@
     color: #333;
     cursor: pointer;
     text-align: center;
+    width: calc(100% - 1.3rem);
+    height: 40px;
+        font-family: var(--fontOne);
 }
 
 #fileInput::file-selector-button {
     margin-right: 10px;
     padding: 10px;
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 #openPopup {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 10px 20px;
+    padding: 18px 50px;
     border: none;
-    cursor: pointer;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: var(--small-xs);
+    font-family: var(--fontOne);
+}
+
+#videos-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 60px;
+    text-align: center;
+    color: var(--black);
+}
+
+#videos-section .container p {
+    margin-bottom: 35px;
 }
 
 .video-previews {
@@ -65,7 +93,7 @@
 
 .video-previews video {
     width: 150px;  
-    height: 265px; /* Height for phone format (9:16 aspect ratio) */
+    height: 265px;
     object-fit: cover;
 }
 
