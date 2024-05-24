@@ -1,0 +1,36 @@
+#discover-breda-map{
+    position: relative;
+    z-index: 2;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: var(--gray);
+    height: 600px;
+    display: flex;
+    align-items: center;
+
+}
+.container {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-container {
+    width: 500px;
+    border: solid 1px black;
+}
+    
+#map {
+    height: 400px;
+    width: 100%;
+}
+.discover-map-text{
+    width: 700px;
+    height: 60%;
+    display: grid;
+    justify-items: start;
+    align-content: space-evenly;
+    padding-left: 90px;
+}
